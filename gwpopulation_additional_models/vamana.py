@@ -68,7 +68,7 @@ class Vamana:
             low=2,
         )
         if self.base_model is not None:
-            norm_prob = trapz(
+            norm_prob = xp.trapz(
                 self.norm_base_prob
                 * truncnorm(
                     self.chirp_mass,
