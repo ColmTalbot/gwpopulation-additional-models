@@ -8,10 +8,9 @@ def truncated_normal_spin_magnitude_independent(
     sigma_chi_1,
     sigma_chi_2,
 ):
-    return (
-        truncnorm(dataset["a_1"], mu=mu_chi_1, sigma=sigma_chi_1, low=0, high=1)
-        * truncnorm(dataset["a_2"], mu=mu_chi_2, sigma=sigma_chi_2, low=0, high=1)
-    )
+    return truncnorm(
+        dataset["a_1"], mu=mu_chi_1, sigma=sigma_chi_1, low=0, high=1
+    ) * truncnorm(dataset["a_2"], mu=mu_chi_2, sigma=sigma_chi_2, low=0, high=1)
 
 
 def truncated_normal_spin_magnitude_iid(dataset, mu_chi, sigma_chi):
@@ -22,4 +21,3 @@ def truncated_normal_spin_magnitude_iid(dataset, mu_chi, sigma_chi):
         sigma_chi_1=sigma_chi,
         sigma_chi_2=sigma_chi,
     )
-    
